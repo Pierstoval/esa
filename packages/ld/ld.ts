@@ -1,7 +1,7 @@
 /// <reference types="urlpattern-polyfill" />
 // @ts-ignore: Property 'UrlPattern' does not exist 
 if (!globalThis.URLPattern) {
-  await import("urlpattern-polyfill");
+  import("urlpattern-polyfill").then(() => {});
 }
 
 export type LdOptions<T extends object> = {

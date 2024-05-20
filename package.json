@@ -18,6 +18,7 @@
   ],
   "private": true,
   "scripts": {
-    "build": "lerna run tsc && cp packages/*/*.js tests-server/"
+    "build": "lerna run tsc && cp packages/*/*.js tests-server/ && cd svelte-app && npm run build",
+    "postinstall": "cd svelte-app && npm install"
   }
 }
